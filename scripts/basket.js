@@ -15,9 +15,8 @@ let total = 0;
       }
       
     })
-    total += ((matchingProduct.price * 10000) * item.quantity) / 10000;
-
-    document.querySelector('.total').innerHTML = 'Total: ' + total + ' BTC';
+    total += (matchingProduct.price * item.quantity);
+    document.querySelector('.total').innerHTML = 'Total: ' + total / 1000 + ' BTC';
 
     //let myPrice = eval(matchingProduct.price * item.quantity);
     const datahtml = `<div class="product-container">
@@ -26,7 +25,7 @@ let total = 0;
 </div>
 <div class="product-info-div">
   <div><p style = 'color:${matchingProduct.color}' class="product-info name">${item.productName}</p></div>
-  <div><p class="product-info price">${matchingProduct.price} BTC</p></div>
+  <div><p class="product-info price">${Number(matchingProduct.price) / 10000} BTC</p></div>
   <div><p class="product-info quantity">quantity: ${item.quantity}</p></div>
   </div></div>`
 

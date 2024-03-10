@@ -11,7 +11,7 @@ products.forEach((productInfos) => {
 </div>
 <div class="product-info-div">
   <div>
-    <p class="product-info-p">${productInfos.price} BTC</p>
+    <p class="product-info-p">${productInfos.price / 10000} BTC</p>
     <button data-product-name = "${productInfos.name}" class="add-to-cart-button">Add To Cart</button>
   </div>
   <div><p class="product-info-p">${productInfos.ingredients}</p></div>
